@@ -19,7 +19,7 @@ const PostCard = ({ data, show, load, setLoad }) => {
     };
 
     const editDataFetch = (id) => {
-        fetch(`http://127.0.0.1:8000/resiver/data/${id}`)
+        fetch(`https://red-drop-django.vercel.app/resiver/data/${id}`)
             .then(res => res.json())
             .then(data => {
                 setEditData(data);
@@ -36,7 +36,7 @@ const PostCard = ({ data, show, load, setLoad }) => {
     const handleSubmit = () => {
         const token = sessionStorage.getItem('token');
 
-        fetch(`http://127.0.0.1:8000/resiver/data/${editData.id}`, {
+        fetch(`https://red-drop-django.vercel.app/resiver/data/${editData.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const PostCard = ({ data, show, load, setLoad }) => {
     const handleDelete = (id) => {
         const token = sessionStorage.getItem('token');
 
-        fetch(`http://127.0.0.1:8000/resiver/data/${id}`, {
+        fetch(`https://red-drop-django.vercel.app/resiver/data/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const PostCard = ({ data, show, load, setLoad }) => {
 
     const handleConfirm = async (resiverId, postId) => {
         try {
-            const response = await fetch('http://127.0.0.1:8000/doner/api/donate/', {
+            const response = await fetch('https://red-drop-django.vercel.app/doner/api/donate/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

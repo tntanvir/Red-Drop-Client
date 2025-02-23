@@ -11,7 +11,7 @@ const Confirmrequest = () => {
 
         // Check if username exists in session storage
         if (username) {
-            fetch(`http://127.0.0.1:8000/doner/api/donate/?resiver=${username}`)
+            fetch(`https://red-drop-django.vercel.app/doner/api/donate/?resiver=${username}`)
                 .then((res) => res.json())
                 .then((datas) => setData(datas))
                 .catch((err) => setError(err.message));

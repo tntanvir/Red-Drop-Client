@@ -28,7 +28,7 @@ const Addreview = () => {
     const handleEdit = (id) => {
         SetEid(id)
         // console.log(id)
-        fetch(`http://127.0.0.1:8000/reviews/data/${id}/`)
+        fetch(`https://red-drop-django.vercel.app/reviews/data/${id}/`)
             .then(res => res.json())
             .then(data => {
 
@@ -41,7 +41,7 @@ const Addreview = () => {
 
 
     const handleConfirm = () => {
-        fetch(`http://127.0.0.1:8000/reviews/data/${eId}/`, {
+        fetch(`https://red-drop-django.vercel.app/reviews/data/${eId}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const Addreview = () => {
             })
     }
     const handleDelete = (id) => {
-        fetch(`http://127.0.0.1:8000/reviews/data/${id}/`, {
+        fetch(`https://red-drop-django.vercel.app/reviews/data/${id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Addreview = () => {
         if (!texts.trim()) return alert("Please enter some feedback!"); // Fixed 'text' to 'texts'
 
         setLoading(true);
-        fetch("http://127.0.0.1:8000/reviews/data/", {
+        fetch("https://red-drop-django.vercel.app/reviews/data/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const Addreview = () => {
 
     useEffect(() => {
         fetch(
-            `http://127.0.0.1:8000/reviews/data/?username=${sessionStorage.getItem(
+            `https://red-drop-django.vercel.app/reviews/data/?username=${sessionStorage.getItem(
                 "username"
             )}`
         )

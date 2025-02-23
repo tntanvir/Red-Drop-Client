@@ -16,7 +16,7 @@ const Sidemanu = () => {
 
     useEffect(() => {
         const user = sessionStorage.getItem('username');
-        fetch(`http://127.0.0.1:8000/authore/user/${user}/`)
+        fetch(`https://red-drop-django.vercel.app/authore/user/${user}/`)
             .then(res => res.json())
             .then(data => setUserdata(data))
             .catch(err => console.error('Error:', err));
@@ -24,7 +24,7 @@ const Sidemanu = () => {
 
 
     const handleLogout = () => {
-        fetch('http://127.0.0.1:8000/authore/logout/', {
+        fetch('https://red-drop-django.vercel.app/authore/logout/', {
             method: 'POST',  // Use POST instead of GET
             headers: {
                 'Content-Type': 'application/json',

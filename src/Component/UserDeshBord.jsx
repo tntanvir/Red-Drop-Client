@@ -11,7 +11,7 @@ const UserDeshBord = () => {
     });
     const [editingImage, setEditingImage] = useState(false);
 
-    const apiUrl = `http://127.0.0.1:8000/authore/user/${sessionStorage.getItem('username')}/`;
+    const apiUrl = `https://red-drop-django.vercel.app/authore/user/${sessionStorage.getItem('username')}/`;
 
     useEffect(() => {
         fetch(apiUrl)

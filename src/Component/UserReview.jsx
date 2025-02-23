@@ -47,7 +47,7 @@ const SlideReviews = () => {
     const arrowRef = useRef(null);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/reviews/data/")
+        fetch("https://red-drop-django.vercel.app/reviews/data/")
             .then((res) => res.json())
             .then((data) => setReviews(data))
             .catch((err) => console.error("Error fetching reviews:", err));

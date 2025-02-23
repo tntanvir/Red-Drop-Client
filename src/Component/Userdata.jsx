@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const Userdata = ({ username }) => {
     const [userdata, setUserdata] = useState(null);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/authore/user/${username}/`)
+        fetch(`https://red-drop-django.vercel.app/authore/user/${username}/`)
             .then(res => res.json())
             .then(data => setUserdata(data))
     }, [])

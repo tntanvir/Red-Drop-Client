@@ -68,7 +68,7 @@ const Register = () => {
         formData.append('blood_group', type)
         formData.append('password', password)
         formData.append('password2', confirmPassword)
-        fetch('http://127.0.0.1:8000/authore/register/', {
+        fetch('https://red-drop-django.vercel.app/authore/register/', {
             method: 'POST',
             body: formData,
 
@@ -120,7 +120,7 @@ const Register = () => {
 
     const Singin = (e) => {
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/authore/login/', {
+        fetch('https://red-drop-django.vercel.app/authore/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

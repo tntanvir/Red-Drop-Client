@@ -48,7 +48,7 @@ const Requestpost = () => {
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/resiver/data/', {
+            const response = await fetch('https://red-drop-django.vercel.app/resiver/data/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Token ${sessionStorage.getItem('token')}`,

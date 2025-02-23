@@ -40,7 +40,7 @@ const Singin = () => {
 
     const Singin = (e) => {
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/authore/login/', {
+        fetch('https://red-drop-django.vercel.app/authore/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
