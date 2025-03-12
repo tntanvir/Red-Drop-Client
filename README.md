@@ -3,6 +3,11 @@
 ## Overview
 This is a **Blood Donation Platform** built with **Django (Backend)** and **React (Frontend)**. The platform connects **blood donors** and **receivers** efficiently, allowing users to request blood donations and donors to confirm requests. The system also includes user authentication and profile management.
 
+## Live Links
+- **Client Live Link:** [Red Drop](https://red-drop-4d803.web.app/)
+- **Backend Repository:** [GitHub](https://github.com/tntanvir/Red-Drop-Django)
+- **Backend Live Link:** [API Store](https://red-drop-django.vercel.app/)
+
 ## Features
 ### User Authentication
 - Users can **register**, **login**, and **logout**.
